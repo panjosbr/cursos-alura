@@ -1,0 +1,40 @@
+div {
+  width: 200px;
+  height: 100px;
+  margin: 70px;
+  border: 1px solid red;
+}
+
+p {
+  width: 270px;
+}
+
+#div1 {
+  overflow: visible;
+}
+
+#div2 {
+  overflow: hidden;
+}
+
+#div3 {
+  overflow: scroll;
+}
+
+#div4 {
+  overflow: auto;
+}
+
+#img1 {
+  position: absolute;
+  top: 10px;
+  left: 400px;
+  clip: auto;
+}
+
+#img2 {
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  clip: rect(10px, 118px, 108px, 40px);
+}
