@@ -12,7 +12,9 @@ h2 {
 
 blockquote {
   background-color: #D9E5E3;
-  border: 10px solid #C2CCCA;
+  border: 10px solid transparent;
+  border-bottom-color: #333;
+  border-right-color: #FFF;
   width: 250px;
   box-sizing: border-box;
 }
