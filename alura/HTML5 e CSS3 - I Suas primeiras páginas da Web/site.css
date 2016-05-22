@@ -10,6 +10,10 @@ h2 {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
 
+h2 {
+    clear: both;
+}
+
 h1 {
     text-transform: uppercase;
 }
@@ -114,4 +118,22 @@ em {
 
 .linkedin {
     background-image: url(linkedin.png);
+}
+
+.fiat { float: right; }
+.petrobras { float: left; }
+
+main {
+    float: left;
+    width: 75%;
+}
+
+footer { clear: both; }
+
+.minha-foto, .navegacao-site {
+    border-left: 10px solid #000;
+    border-bottom: 10px solid #000; 
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
 }
