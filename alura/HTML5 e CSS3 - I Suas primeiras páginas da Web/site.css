@@ -26,6 +26,7 @@ main h1 {
     color: #FFF;
     padding: 25px;
     border-bottom: 10px solid #000;
+    text-transform: uppercase;
 }
 
 main h2 {
@@ -53,9 +54,25 @@ aside a {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
 
+nav a {
+  text-transform:  lowercase;
+}
+
+.redes-sociais a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+}
+
+.github { background: url(projeto/github.png); }
+.twitter { background: url(projeto/twitter.png); }
+.linkedin { background: url(projeto/linkedin.png); }
+
 aside h1 {
     font-size: 30px;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .conteudo-principal {
