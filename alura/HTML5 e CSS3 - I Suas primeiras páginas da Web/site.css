@@ -10,7 +10,11 @@ h2 {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
 
-.comentario {
+h1 {
+    text-transform: uppercase;
+}
+
+.citacao-bio {
     background-color: #D9E5E3;
     border: 10px solid #C2CCCA;
     padding: 20px;
@@ -19,17 +23,16 @@ h2 {
     box-sizing: border-box;
 }
 
-main h1 {
+.titulo-principal {
     font-size: 60px;;
     text-align: center;
     background-color: #851944;
     color: #FFF;
     padding: 25px;
     border-bottom: 10px solid #000;
-    text-transform: uppercase;
 }
 
-main h2 {
+.subtitulo-texto {
     font-size: 30px;
 }
 
@@ -42,40 +45,31 @@ p {
     margin: 20px 0;
 }
 
-.navegacao {
+.navegacao-site {
     text-align: center;
     background-color: #3C1D3D;
     color: #F2FFFC;
     padding: 20px;
 }
 
-aside a {
+.navegacao-site a {
     color: inherit;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
+    text-transform: lowercase;
 }
 
-nav a {
-  text-transform:  lowercase;
-}
-
-.redes-sociais a {
-  display: block;
-  width: 40px;
-  height: 40px;
-  text-indent: -9999px;
-}
-
-.github { background: url(projeto/github.png); }
-.twitter { background: url(projeto/twitter.png); }
-.linkedin { background: url(projeto/linkedin.png); }
-
-aside h1 {
+.navegacao-site h1 {
     font-size: 30px;
     margin-bottom: 25px;
-    text-transform: uppercase;
 }
 
-.conteudo-principal {
+.rodape-pagina {
+    background-color: #000;
+    color: #F2FFFC;
+    padding: 20px;
+}
+
+.container {
     width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -90,27 +84,34 @@ em {
     font-style: italic;
 }
 
-.redes-sociais li {
-  display: inline-block;
-}
-
-.rodape-pagina {
-  background-color: #000;
-  color: #F2FFFC;
-  padding: 20px;
-}
-
-.post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
+.icones-redes-sociais li {
+    display: inline-block;
 }
 
 .leia-mais {
-  font-size: 20px;
-  display: block;
-  text-align: center;
-  background-color: #E6E7E8;
-  margin: auto;
-  padding: 10px;
+    padding: 8px;
+    margin: 16px;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    background-color: #E6E7E8;
+}
+
+.icones-redes-sociais a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-indent: -99999px;
+}
+
+.github {
+    background-image: url(github.png);
+}
+
+.twitter {
+    background-image: url(twitter.png);
+}
+
+.linkedin {
+    background-image: url(linkedin.png);
 }
