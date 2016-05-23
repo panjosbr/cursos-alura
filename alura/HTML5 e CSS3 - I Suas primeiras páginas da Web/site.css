@@ -69,6 +69,11 @@ p {
     color: #F2FFFC;
     padding: 20px;
     clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .container {
@@ -129,19 +134,26 @@ em {
 }
 
 main {
-    width: 80%;
-    float: left;
+    width: 85%;
+    position: relative;
+    padding-bottom: 80px;
 }
 
 .minha-foto,
 .navegacao-site {
-    width: 20%;
-    float: right;
     border-left: 10px solid black;
     border-bottom: 10px solid black;
     box-sizing: border-box;
 }
 
-.navegacao-site {
-    clear: right;
+img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+aside {
+    position: absolute;
+    top: 310px;
+    right: 0;
 }
