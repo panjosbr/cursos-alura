@@ -10,10 +10,6 @@ h2 {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
 
-h2 {
-    clear: both;
-}
-
 h1 {
     text-transform: uppercase;
 }
@@ -38,6 +34,7 @@ h1 {
 
 .subtitulo-texto {
     font-size: 30px;
+    clear: both;
 }
 
 main a {
@@ -71,6 +68,7 @@ p {
     background-color: #000;
     color: #F2FFFC;
     padding: 20px;
+    clear: both;
 }
 
 .container {
@@ -120,20 +118,30 @@ em {
     background-image: url(linkedin.png);
 }
 
-.fiat { float: right; }
-.petrobras { float: left; }
-
-main {
+.petrobras {
     float: left;
-    width: 75%;
+    margin-left: 0;
 }
 
-footer { clear: both; }
+.fiat {
+    float: right;
+    margin-right: 0;
+}
 
-.minha-foto, .navegacao-site {
-    border-left: 10px solid #000;
-    border-bottom: 10px solid #000; 
-    box-sizing: border-box;
+main {
+    width: 80%;
     float: left;
-    width: 25%;
+}
+
+.minha-foto,
+.navegacao-site {
+    width: 20%;
+    float: right;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    box-sizing: border-box;
+}
+
+.navegacao-site {
+    clear: right;
 }
