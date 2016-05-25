@@ -74,6 +74,9 @@ p {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    background-image: url(eu-ico-small.png);
+    background-position: 99% center;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -134,8 +137,8 @@ em {
 }
 
 main {
-    width: 85%;
-    position: relative;
+    width: 80%;
+    float: left;
     padding-bottom: 80px;
 }
 
@@ -146,14 +149,15 @@ main {
     box-sizing: border-box;
 }
 
-img {
-    position: absolute;
-    top: 0;
-    right: 0;
+.navegacao-site {
+    width: 20%;
+    float: right;
+    position: relative;
+    top: 310px;
 }
 
-aside {
+.minha-foto {
     position: absolute;
-    top: 310px;
+    top: 0;
     right: 0;
 }
