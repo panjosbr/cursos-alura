@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+  var pularLinha = function () {
+    document.write("<br><hr><br>");
+  };
+
+  var mostra = function(frase) {
+    document.write(frase);
+    pularLinha();
+  };
+
+  var calculaPontos = function(vitorias, empates) {
+    return (vitorias * 3) + empates;
+  };
+
+  var vitorias = parseInt(prompt("Quantas vitorias o São Paulo teve?"));
+  var empates = parseInt(prompt("Quantos empates o time SP teve?"));
+  var pontos = calculaPontos(vitorias,empates);
+
+  if(pontos > 28 ){
+    mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+  }
+
+  if(pontos == 28) {
+    mostra("Nosso time está EMPATADO com o Livros Velhos!");
+  }
+
+  </script>

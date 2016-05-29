@@ -24,10 +24,14 @@
   var imc = peso / (altura * altura);
 
   var nome = prompt("Bom dia! Qual é o seu nome: ");
-  document.write("Bem vindo, " + nome);
+  mostra("Bem vindo, " + nome);
 
   var idade = prompt(nome + ", quantos anos você tem?");
-  document.write(nome + " tem " + idade + " anos.");
+  mostra(nome + " tem " + idade + " anos.");
+
+  if (imc > 18.5 && imc < 35) {
+    mostra("OK! Seu IMC está entre os dois limites.");
+  }
 
 
 </script>
