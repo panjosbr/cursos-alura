@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+  var pularLinha = function () {
+    document.write("<br><hr><br>");
+  };
+
+  var mostra = function(frase) {
+    document.write(frase);
+    pularLinha();
+  };
+
+  var calcularIMC = function(altura,peso) {
+    var imc = peso / (altura * altura);
+    mostra("IMC Calculado é : " + imc);
+  };
+
+  calcularIMC(1.81, 76);
+  var obesidadeSevera = 35 - imc;
+  mostra("Você está há " + obesidadeSevera + " da obesidade severa!");
+  
+  var peso = 76;
+  var altura = 1.81;
+  var imc = peso / (altura * altura);
+
+  var nome = prompt("Bom dia! Qual é o seu nome: ");
+  document.write("Bem vindo, " + nome);
+
+  var idade = prompt(nome + ", quantos anos você tem?");
+  document.write(nome + " tem " + idade + " anos.");
+
+
+</script>
+

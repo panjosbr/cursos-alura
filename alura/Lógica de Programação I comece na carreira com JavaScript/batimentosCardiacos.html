@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+  var pularLinha = function () {
+    document.write("<br><hr><br>");
+  };
+
+  var mostra = function(frase) {
+    document.write(frase);
+    pularLinha();
+  };
+
+  var calcularIMC = function(altura,peso) {
+    var imc = peso / (altura * altura);
+    mostra("IMC Calculado é : " + imc);
+  };
+
+  var idade = prompt("Quantos anos você tem?");
+  var dias = idade * 365;
+  document.write("Você já viveu " + dias + " dias <br>");
+
+  var batimentos = dias * 24 * 60 * 80;
+  document.write("Seu coração já bateu " + batimentos + " vezes. Haja coração!!");
+
+</script>
