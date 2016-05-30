@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<h1>Copa do Mundo</h1>
+
+<script>
+  var mostra = function(frase) {
+    document.write(frase + "<br>");
+  };
+
+  var anoDaCopa = parseInt(prompt("Informe o ano da ultima copa:"));
+
+  var anoLimite = prompt("Qual o ano limite?");
+
+  while (anoDaCopa <= anoLimite) {
+    mostra(anoDaCopa + " é o ano da copa!");
+    anoDaCopa = 4 + anoDaCopa;
+  }
+
+  mostra("Ufa! Esses foram os anos da copa até " + anoLimite);
+
+  </script>
