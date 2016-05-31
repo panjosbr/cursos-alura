@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<style type="text/css">
+    canvas {
+        border: 1px solid gray;
+        margin: 10px;
+    }
+    div {
+        display: inline-block;
+    }
+</style>
+<h1>Canvas - Bandeiras</h1>
+<div>
+    <h2>Colômbia</h2>
+    <canvas id="colombia" width="600" height="400">Bandeira da Colômbia</canvas>
+</div>
+<div>
+    <h2>Madagascar</h2>
+    <canvas id="madagascar" width="600" height="400">Bandeira do Madagascar</canvas>    
+</div>
+
+<script>
+    var colombia = document.getElementById("colombia");
+    var c = colombia.getContext("2d");
+
+    c.fillStyle = "#F6CE45";
+    c.fillRect(0, 0, 600, 200);
+    c.fillStyle = "#0E418F";
+    c.fillRect(0, 200, 600, 100);
+    c.fillStyle = "#BD3733";
+    c.fillRect(0, 300, 600, 100);
+
+    var madagascar = document.getElementById("madagascar");
+    var m = madagascar.getContext("2d");
+
+    m.fillStyle = "#E95743";
+    m.fillRect(200, 0 , 400, 200);
+    m.fillStyle = "#37783E";
+    m.fillRect(200, 200, 400, 200);
+
+</script>
