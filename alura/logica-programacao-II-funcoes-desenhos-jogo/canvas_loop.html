@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<style>
+
+</style>
+<h1>Canvas - Aula 2</h1>
+<canvas id="tela" width="600" width="400"></canvas>
+
+<script>
+    var desenhaQuadradoVerde = function(x, y) {
+        var tela = document.getElementById("tela");
+        var c = tela.getContext("2d");
+
+        c.fillStyle = "green";
+        c.fillRect(x, y, 50, 50);
+
+    };
+
+    var desenhaQuadradoVermelho = function(x, y) {
+        var tela = document.getElementById("tela");
+        var c = tela.getContext("2d");
+
+        c.fillStyle = "red";
+        c.fillRect(x, y, 100, 100);
+
+        c.strokeStyle = "black";
+        c.strokeRect(x, y, 100, 100);
+
+    };
+
+    
+</script>
