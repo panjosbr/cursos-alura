@@ -14,6 +14,9 @@
         c.fillStyle = "green";
         c.fillRect(x, y, 50, 50);
 
+        c.strokeStyle = "black";
+        c.strokeRect(x, y, 50, 50);
+
     };
 
     var desenhaQuadradoVermelho = function(x, y) {
@@ -21,12 +24,27 @@
         var c = tela.getContext("2d");
 
         c.fillStyle = "red";
-        c.fillRect(x, y, 100, 100);
+        c.fillRect(x, y, 50, 50);
 
         c.strokeStyle = "black";
-        c.strokeRect(x, y, 100, 100);
-
+        c.strokeRect(x, y, 50, 50);
     };
 
+    var desenhaBolaAzul = function(x, y) {
+        var tela = document.getElementById("tela");
+        var c = tela.getContext("2d");
+
+        c.fillStyle = "blue";
+        c.beginPath();
+        c.arc(x, y, 25, 0, 2 * Math.PI);
+        c.stroke();
+        c.fill();
+    };
+
+    for(var x = 0; x < 600; x = x + 50) {
+        desenhaQuadradoVerde(x, 0);
+        desenhaQuadradoVermelho(x, 50);
+        desenhaBolaAzul(x, 100);
+    }
     
 </script>
