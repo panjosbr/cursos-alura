@@ -43,7 +43,7 @@ section:nth-child(even) {
 }
 
 p {
-  color: #B6B6B6;
+  color: #989898;
 }
 
 p + h3 { margin-top: 15px; }
@@ -119,4 +119,48 @@ button {
 
 #fale-conosco button {
   padding: 10px 40px;
+}
+
+.equipe li {
+  width: 20%;
+  margin-left: 25px;
+}
+
+.equipe li figure img {
+  border-radius: 75px;
+  border: 5px solid #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.equipe figure figcaption {
+  font-weight: 800;
+}
+
+.equipe figure span {
+  font-size: 12px;
+  color: #989898;
+}
+
+.recursos {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.recursos img {
+  width: 35%;
+  float: right;
+  margin-top: 15px;
+}
+
+.recursos div > div {
+  float: left;
+  width: 60%;
+  padding: 0;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.recursos h3 {
+  font-size: 22px;
 }
