@@ -13,7 +13,7 @@ img { max-width: 100%; }
 section div,
 header div,
 footer div {
-  width: 780px;
+  width: 800px;
   margin: 0 auto;
   padding: 30px 0;
   text-align: center;
@@ -28,14 +28,15 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 header {
   position: absolute;
   margin: 0 auto;
+  width: 100%;
 }
 
 section:nth-child(even) {
@@ -56,7 +57,7 @@ a {
 
 ul{ display: inline-block; }
 
-ul, ul + ul { margin-bottom: 20px; }
+ul, ul + ul { margin: 0 auto; }
 
 ul li { 
   display: inline-block;
@@ -77,6 +78,38 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
+  margin: 15px auto;
+}
+
+form {
+  width: 400px;
+}
+
+form fieldset { border: none; }
+
+form legend { 
+  font-size: 12px;
+  text-align: left;
+}
+
+form fieldset label select,
+form fieldset textarea { 
+  font-style: italic;
+  color: #989898;
+}
+
+form fieldset textarea { height: 120px; }
+
+form fieldset label,
+form fieldset input,
+form fieldset select,
+form fieldset textarea {
+  margin: 5px auto 5px auto;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 5px;
+  border-radius: 1px;
 }
 
 .segmentos li {
@@ -127,7 +160,7 @@ button {
 }
 
 .equipe li figure img {
-  border-radius: 75px;
+  border-radius: 100px;
   border: 5px solid #FFFFFF;
   margin-bottom: 10px;
 }
@@ -141,26 +174,115 @@ button {
   color: #989898;
 }
 
-.recursos {
+.recursos,
+.plataformas {
   display: inline-block;
   width: 100%;
   padding: 15px 0;
 }
 
-.recursos img {
+.recursos img,
+.plataformas img {
   width: 35%;
-  float: right;
   margin-top: 15px;
 }
 
-.recursos div > div {
-  float: left;
-  width: 60%;
+.recursos img { float: right; }
+.plataformas img { float: left; }
+
+.recursos div > div,
+.plataformas div > div {
+  width: 55%;
   padding: 0;
   margin: 10px auto;
+}
+
+.recursos div > div { 
+  float: left;
+  text-align: left;
+}
+.plataformas div > div { float: right; }
+
+
+.recursos h3,
+.plataformas h3 {
+  font-size: 22px;
+}
+
+.ios { background: url(../images/icon-apple-ios.png) no-repeat; }
+.android { background: url(../images/icon-android.png) no-repeat; }
+.windows-phone { background: url(../images/icon-windows-phone.png) no-repeat; }
+.firefox { background: url(../images/icon-firefox-os.png) no-repeat; }
+
+.ios,
+.android,
+.firefox,
+.windows-phone {
+  background-size: 100%;
+  width: 70px;
+  height: 70px;
+}
+
+.plataformas li {
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.plataformas h3,
+.plataformas p {
   text-align: left;
 }
 
-.recursos h3 {
-  font-size: 22px;
+#fale-conosco div > div {
+  display: inline-block;
+  width: 360px;
+  float: right;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 0;
+  font-size: 14px;
+}
+
+#fale-conosco p {
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+#fale-conosco span {
+  color: #fed136;
+  font-weight: 700;
+}
+
+#fale-conosco form { float: left; }
+
+#fale-conosco div iframe {
+  float: right;
+  width: 45%;
+  margin: 50px 0;
+}
+
+#logo {
+  background: url(../images/startup-me_logo.png) no-repeat;
+  background-size: 150px;
+  width: 150px;
+  height: 40px;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+}
+
+#navegacao {
+  float: right;
+  display: inline-block;
+}
+
+#navegacao ul { margin: 0 auto; }
+
+.copyright {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
 }
