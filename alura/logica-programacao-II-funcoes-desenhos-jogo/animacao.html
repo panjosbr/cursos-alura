@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<h1>Animação - Canvas</h1>
+
+<canvas id="screen" width="600" height="400"></canvas>
+
+<script>
+	var screen = document.getElementById("screen");
+	var c = screen.getContext("2d");
+	c.fillStyle = "gray";
+	c.fillRect(0, 0, 600, 400);
+	
+	var circle = function(x, y, raio){
+		c.fillStyle = "blue";
+		c.beginPath();
+		c.arc(x, y, raio, 0, 2*Math.PI);
+		c.fill();
+	};
+
+	var clearScreen = function(){
+		c.clearRect(0, 0, 600, 400);
+	};
+
+	var x = 1;
+
+	var print = function(){
+		clearScreen();
+		circle(x, 100, 10);
+		x = x + 1;
+	}
+
+	setInterval(print, 0.5);
+
+</script>
