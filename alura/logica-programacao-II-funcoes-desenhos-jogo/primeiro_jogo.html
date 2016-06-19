@@ -2,24 +2,41 @@
 
 <canvas id="tela" width="600" height="400"></canvas>
 
-<script type="text/javascript">
+<script>
     var tela = document.getElementById("tela");
     var c = tela.getContext("2d");
 
     c.fillStyle = "gray";
     c.fillRect(0, 0, 600, 400);
 
-    var atira = function(evento) {
-        var x = evento.pageX - tela.offsetLeft;
-        var y = evento.pageY - tela.offsetTop;
+    var azul = function(x,y) {
+        c.fillStyle = "blue";
+        c.beginPath();
+        c.arc(x, y, 10, 0, 2 * 3.14);
+        c.fill();
+    };
 
+    var vermelho = function(x,y){
         c.fillStyle = "red";
         c.beginPath();
         c.arc(x, y, 10, 0, 2 * 3.14);
         c.fill();
+    };
 
+    tela.oncontextmenu = function(evento){
+        evento.preventDefault();
+        var x = evento.pageX;
+        var y = evento.pageY;
+        vermelho(x,y);        
         console.log("Posição do clique: " + x + " " + y);
     }
 
-    tela.onclick = atira;
+    tela.onclick = function(evento){
+        evento.preventDefault();
+        var x = evento.pageX;
+        var y = evento.pageY;
+        azul(x,y);        
+        console.log("Posição do clique: " + x + " " + y);
+    }
+
 </script>
