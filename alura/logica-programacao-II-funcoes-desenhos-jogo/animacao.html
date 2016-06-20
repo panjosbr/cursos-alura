@@ -3,6 +3,11 @@
 
 <canvas id="screen" width="600" height="400"></canvas>
 
+<style type="text/css">
+	canvas { border: 1px solid black; }
+	
+</style>
+
 <script>
 	var screen = document.getElementById("screen");
 	var c = screen.getContext("2d");
@@ -13,19 +18,30 @@
 		c.fillStyle = "blue";
 		c.beginPath();
 		c.arc(x, y, raio, 0, 2*Math.PI);
-		c.fill();
+		c.stroke();
 	};
 
+	var square = function(x, y) {
+		c.fillStyle = "black";
+		c.fillRect(x, y, 50, 50);
+	};
+
+	var image = new Image();
+	image.src = "paulo.png";
+
 	var clearScreen = function(){
-		c.clearRect(0, 0, 600, 400);
+		// c.clearRect(0, 0, 600, 400);
+		c.strokeStyle = "red";
 	};
 
 	var x = 1;
+	var y = 2;
 
 	var print = function(){
 		clearScreen();
 		circle(x, 100, 10);
-		x = x + 1;
+		c.drawImage(image, x, x/2);
+		x = x +1;
 	}
 
 	setInterval(print, 0.5);

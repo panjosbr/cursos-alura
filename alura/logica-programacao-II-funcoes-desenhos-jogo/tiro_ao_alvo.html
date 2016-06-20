@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tiro ao alvo</title>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+            * {
+                font-family: 'Bangers', cursive;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                /*background: url(texture.jpg);*/
+            }
+
+            h1{
+                color: #f44336;
+                text-shadow: 1px 9px 2px rgba(193, 193, 193, 0.58);
+                letter-spacing: 5px;
+                box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.4);
+                padding: 10px;
+                font-size: 60px;
+            }
+
+            div {
+                width: 900px;
+                margin: 10px auto;
+            }
+            canvas {
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+                background: rgba(158, 158, 158, 0.12);
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Tiro ao alvo!</h1>
+
+            <canvas id="screen" width="800" height="500"></canvas>
+            
+        </div>
+
+    </body>
+</html>
+<script>
+    var screen = document.getElementById("screen");
+    var c = screen.getContext("2d");
+
+    var targetX;
+    var targetY;
+    var radius = 30;
+
+    var printTarget = function(x, y) {
+        circle(x, y, radius, "white");
+        circle(x, y, radius + 30, "red");
+        circle(x, y, radius + 20, "white");
+        circle(x, y, radius + 10, "red");
+    };
+
+    var circle = function(x, y, radius, cor) {
+        c.fillStyle = cor;
+        c.beginPath();
+        c.arc(x, y, radius, 0, 2*Math.PI);
+        c.fill();
+    };
+
+    var clearScreen = function() {
+        c.clearRect(0, 0, 800, 500);
+    };
+
+    var raffle = function(max) {
+        return Math.floor(Math.random() * max);
+    };
+
+    var printScreen = function() {
+        clearScreen();
+        targetX = raffle(800);
+        targetY = raffle(500);
+        printTarget(targetX, targetY);
+    };
+
+    setInterval(printScreen, 600);
+
+    screen.onclick = function(event) {
+        var x = event.pageX - screen.offsetLeft;
+        var y = event.pageY - screen.offsetTop;
+
+        if((x > targetX - radius) && (x < targetX + radius) && (y > targetY - radius) && (y < targetY + radius)) {
+            alert("Acertou!");
+        }
+    };
+
+</script>
