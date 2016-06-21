@@ -1,18 +1,20 @@
 .foto-home {
-    height: 200px;
+    height: 10em;
 }
 .saudacao p {
     font-size: 1.5em;
     color: #99A;
     line-height: 1;
     padding: 2em;
+    margin: 0 auto;
+    width: 70%;
 }
 .saudacao-inicio {
     font-size: 3em;
     color: #889;
 }
 .saudacao-ultima-linha {
-    text-align: right;
+    text-align: center;
     display: block;
 }
 .saudacao strong {
@@ -35,7 +37,7 @@
     text-align: center;
 }
 .secao-inicio {
-    padding: 2em;
+    padding: 3em;
 }
 .secao-inicio h2 {
     font-size: 3em;
