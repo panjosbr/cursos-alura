@@ -68,6 +68,7 @@
     background-color: #999;
     color: #FFF;
     border-bottom: .5em solid #851944;
+    position: relative;
 }
 .blog small {
     position: relative;
@@ -78,6 +79,7 @@
     padding: .5em;
     display: block;
 }
+
 footer {
     background-color: #000;
     color: #FFF;
@@ -159,4 +161,26 @@ header {
 .design {
     top: 40%;
     left: 75%;
+}
+
+.blog .inicio-post {
+    position: absolute;
+    top: 5em;
+    height: 8em;
+    left: 30%;
+    right: 4em;
+    background-color: #F2FFFC;
+    color: #000;
+    padding: 1.5em;
+}
+
+.blog .mais-recente {
+    background-color: #F2FFFC;
+}
+.blog .mais-recente a {
+    color: #F26;
+}
+
+.blog li {
+    width: 30%;
 }
