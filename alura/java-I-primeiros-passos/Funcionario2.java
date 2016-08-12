@@ -12,22 +12,31 @@ class Funcionario2 {
         return this.salario * 12;
     }
 
+    void mostra() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Departamento: " + this.departamento);
+        System.out.println("Conta: " + this.conta);
+        System.out.println("Salario: " + this.salario);
+        System.out.println("Ganho Anual:" + this.calculaGanhoAnual());
+    }
 }
 
 class TesteFuncionario {
     public static void main(String[] args){
         Funcionario2 f1 = new Funcionario2();
-        f1.nome = "Teste";
+        f1.nome = "Mariana";
         f1.departamento = "TI";
         f1.conta = 12345;
-        f1.salario = 1500.0;
+        f1.salario = 1000.0;
+        f1.mostra();
 
-        System.out.println(f1.nome);
-        System.out.println(f1.departamento);
-        System.out.println(f1.conta);
-        System.out.println(f1.salario);
-        System.out.println("Ganho anual do funcionario: " + f1.calculaGanhoAnual());
-        f1.recebeAumento(500.0);
-        System.out.println("Valor do salario apos o aumento: " + f1.salario);
+        Funcionario2 f2 = f1;
+
+        if(f1 == f2) {
+            System.out.println("iguais");
+        } else {
+            System.out.println("diferentes");
+        }
+
     }
 }
