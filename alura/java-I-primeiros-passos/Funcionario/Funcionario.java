@@ -109,6 +109,27 @@ class Empresa {
     private Funcionario[] empregados;
     private int livre = 0;
 
+    public void adicionar(Funcionario f) {
+        this.empregados[this.livre] = f;
+        this.livre++;
+    }
+
+    public void exibeSalarioFuncionarios() {
+        for(int i = 0; i < this.livre; i++) {
+            System.out.println("[" + i + "]" + this.empregados[i].getNome());
+            System.out.println("R$ " + this.empregados[i].getSalario());
+        }
+    }
+
+    public boolean contem(Funcionario f) {
+        for(int i = 0; i < this.livre; i++) {
+            if(f == this.empregados[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public String getNome(){
         return this.nome;
     }
@@ -143,6 +164,23 @@ class TesteFuncionario {
         d1.setData(06, 07, 2016);
         f1.setDataEntrada(d1);
         f1.mostra();
+    }
+}
 
+class TesteEmpresa {
+    public static void main(String[] args) {
+        Empresa google = new Empresa();
+
+        Funcionario f2 = new Funcionario();
+        f2.setNome("Panjos");
+        f2.setDepartamento("Informatica");
+        f2.setRg("65.654.981-1");
+        f2.setSalario(2000.0);
+        Data d2 = new Data();
+        d2.setData(01, 05, 2013);
+        f2.setDataEntrada(d2);
+
+        // google.adicionar(f2);
+        google.exibeSalarioFuncionarios();
     }
 }
