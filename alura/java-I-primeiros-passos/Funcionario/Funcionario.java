@@ -103,6 +103,34 @@ class Data {
     }
 }
 
+class Empresa {
+    private String nome;
+    private String cnpj;
+    private Funcionario[] empregados;
+    private int livre = 0;
+
+    public String getNome(){
+        return this.nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getCnpj(){
+        return this.cnpj;
+    }
+
+    public void setCnpj(String cnpj){
+        this.cnpj = cnpj;
+    }
+
+    public Funcionario getFuncionario(int posicao) {
+        return this.empregados[posicao];
+    }
+
+}
+
 class TesteFuncionario {
     public static void main(String[] args){
         Funcionario f1 = new Funcionario();
