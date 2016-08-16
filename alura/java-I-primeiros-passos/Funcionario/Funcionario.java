@@ -110,6 +110,7 @@ class Empresa {
     private int livre = 0;
 
     public void adicionar(Funcionario f) {
+        //NullPointerException linha 114
         this.empregados[this.livre] = f;
         this.livre++;
     }
@@ -179,8 +180,8 @@ class TesteEmpresa {
         Data d2 = new Data();
         d2.setData(01, 05, 2013);
         f2.setDataEntrada(d2);
-
-        // google.adicionar(f2);
+        //NullPointerException linha 184
+        google.adicionar(f2);
         google.exibeSalarioFuncionarios();
     }
 }
