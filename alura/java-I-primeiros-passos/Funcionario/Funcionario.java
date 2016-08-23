@@ -31,7 +31,7 @@ class Funcionario {
     }
 
     public void preencherDataDaEntrada(int dia, int mes, int ano) {
-        this.dataEntrada.setData(dia, mes, ano);
+        this.dataEntrada = new Data(dia, mes, ano);
     }
 
     public String getNome(){
@@ -80,7 +80,9 @@ class Data {
     private int mes;
     private int ano;
 
-    public void  setData(int dia, int mes, int ano){
+    public Data () {}
+
+    public Data(int dia, int mes, int ano) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
@@ -154,9 +156,8 @@ class TesteFuncionario {
         f1.setDepartamento("TI");
         f1.setRg("12.345.678-9");
         f1.setSalario(1500.0);
-        Data d1 = new Data();
-        d1.setData(06, 07, 2016);
-        f1.setDataEntrada(d1);
+        // f1.preencherDataDaEntrada(06/07/2016);
+        f1.preencherDataDaEntrada(06, 07, 2016);
         f1.mostra();
 
         Funcionario f3 = new Funcionario("Paulo Pereira dos Anjos");
