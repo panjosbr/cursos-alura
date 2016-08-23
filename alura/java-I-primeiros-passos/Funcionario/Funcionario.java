@@ -2,9 +2,14 @@ class Funcionario {
     private String nome;
     private String departamento;
     private double salario;
-    private Data dataEntrada;
+    private Data dataEntrada = new Data();
     private String rg;
 
+    public Funcionario() {}
+
+    public Funcionario(String nome) {
+        this.nome = nome;
+    }
 
     public void recebeAumento(double valorAumento){
         this.salario += valorAumento;
@@ -15,11 +20,18 @@ class Funcionario {
     }
 
     public void mostra(){
+        System.out.println("------------------------------");
         System.out.println("Nome: " + this.getNome());
+        System.out.println("RG: " + this.getRg());
         System.out.println("Departamento: " + this.getDepartamento());
         System.out.println("Salario: " + this.getSalario());
-        System.out.println("RG: " + this.getRg());
-        this.dataEntrada.dataFormatada();
+        System.out.println("Ganho anual: " + this.getGanhoAnual());
+        System.out.println("Data de entrada: " + this.dataEntrada.getDataFormatada());
+        System.out.println();
+    }
+
+    public void preencherDataDaEntrada(int dia, int mes, int ano) {
+        this.dataEntrada.setData(dia, mes, ano);
     }
 
     public String getNome(){
@@ -74,32 +86,8 @@ class Data {
         this.ano = ano;
     }
 
-    public void dataFormatada(){
-        System.out.print(this.getDia() + "/" + this.getMes() + "/" + this.getAno());
-    }
-
-    public int getDia(){
-        return this.dia;
-    }
-
-    public void setDia(int dia){
-        this.dia = dia;
-    }
-
-    public int getMes(){
-        return this.mes;
-    }
-
-    public void setMes(int mes){
-        this.mes = mes;
-    }
-
-    public int getAno(){
-        return this.ano;
-    }
-
-    public void setAno(int ano){
-        this.ano = ano;
+    String getDataFormatada(){
+        return this.dia + "/" + this.mes + "/" + this.ano;
     }
 }
 
@@ -109,8 +97,13 @@ class Empresa {
     private Funcionario[] empregados;
     private int livre = 0;
 
+    public Empresa() {}
+
+    public Empresa(int tamanho) {
+        this.empregados = new Funcionario[tamanho];
+    }
+
     public void adicionar(Funcionario f) {
-        //NullPointerException linha 114
         this.empregados[this.livre] = f;
         this.livre++;
     }
@@ -165,23 +158,24 @@ class TesteFuncionario {
         d1.setData(06, 07, 2016);
         f1.setDataEntrada(d1);
         f1.mostra();
+
+        Funcionario f3 = new Funcionario("Paulo Pereira dos Anjos");
+        f3.mostra();
+
     }
 }
 
 class TesteEmpresa {
     public static void main(String[] args) {
-        Empresa google = new Empresa();
+        Empresa google = new Empresa(10);
 
-        Funcionario f2 = new Funcionario();
-        f2.setNome("Panjos");
+        Funcionario f2 = new Funcionario("Paulo dos Anjos");
         f2.setDepartamento("Informatica");
         f2.setRg("65.654.981-1");
         f2.setSalario(2000.0);
-        Data d2 = new Data();
-        d2.setData(01, 05, 2013);
-        f2.setDataEntrada(d2);
-        //NullPointerException linha 184
+        f2.preencherDataDaEntrada(01, 05, 2013);
         google.adicionar(f2);
-        google.exibeSalarioFuncionarios();
+        // google.exibeSalarioFuncionarios();
+        google.getFuncionario(0).mostra();
     }
 }
