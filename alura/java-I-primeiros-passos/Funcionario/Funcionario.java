@@ -86,6 +86,32 @@ class Data {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
+
+        if(!isDataViavel(dia, mes, ano)) {
+            System.out.println("A data " + getDataFormatada() + " não existe!");
+        }
+    }
+
+    private boolean isDataViavel(int dia, int mes, int ano) {
+        if(dia <= 0 || mes <= 0 || mes > 12 || ano <=0) {
+            return false;
+        }
+
+        int ultimoDiaDoMes = 31; //padrão para a maioria dos meses
+        if(mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+            ultimoDiaDoMes = 30;
+        } else if(mes == 2) {
+            ultimoDiaDoMes = 28;
+            if((ano % 400 == 0) || ((ano % 4 == 0) & (ano % 100 != 0))) {
+               ultimoDiaDoMes = 29;
+            }
+        }
+
+        if(dia > ultimoDiaDoMes) {
+            return false;
+        }
+
+        return true;
     }
 
     String getDataFormatada(){
@@ -174,7 +200,7 @@ class TesteEmpresa {
         f2.setDepartamento("Informatica");
         f2.setRg("65.654.981-1");
         f2.setSalario(2000.0);
-        f2.preencherDataDaEntrada(01, 05, 2013);
+        f2.preencherDataDaEntrada(31, 02, 2013);
         google.adicionar(f2);
         // google.exibeSalarioFuncionarios();
         google.getFuncionario(0).mostra();
