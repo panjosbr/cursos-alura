@@ -4,11 +4,14 @@ class Funcionario {
     private double salario;
     private Data dataEntrada = new Data();
     private String rg;
+    private int id;
+    private static int proximoFuncionario = 0;
 
     public Funcionario() {}
 
     public Funcionario(String nome) {
         this.nome = nome;
+        this.id = ++proximoFuncionario;
     }
 
     public void recebeAumento(double valorAumento){
@@ -72,6 +75,10 @@ class Funcionario {
 
     public void setRg(String rg){
         this.rg = rg;
+    }
+
+    public int getId() {
+        return this.id;
     }
 }
 
