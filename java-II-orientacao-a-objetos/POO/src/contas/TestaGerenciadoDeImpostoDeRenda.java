@@ -11,7 +11,6 @@ public class TestaGerenciadoDeImpostoDeRenda {
 		gerenciador.adiciona(cc);
 		
 		System.out.println(gerenciador.getTotal());
-		System.out.println(cc.getSaldo());
 	}
 
 }
