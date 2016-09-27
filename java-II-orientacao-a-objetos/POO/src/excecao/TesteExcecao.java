@@ -16,14 +16,14 @@ public class TesteExcecao {
 	static void metodo2() {
 		System.out.println("Inicio metodo 2");
 		int[] array = new int[10];
-		try {
 			for (int i = 0; i <= 15; i++) {
-				array[i] = i;
-				System.out.println(i);
+				try {
+					array[i] = i;
+					System.out.println(i);
+				} catch (ArrayIndexOutOfBoundsException e) {
+					System.out.println("Erro " + e);
+				}
 			}
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Ocorreu um erro! " + e);
-		}
 
 		System.out.println("Fim metodo 2");
 
