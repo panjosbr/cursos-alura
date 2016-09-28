@@ -13,7 +13,11 @@ abstract class Conta {
 	}
 
 	public void deposita(double valor) {
-		this.saldo += valor;
+		if (valor < 0) {
+			throw new IllegalArgumentException();
+		} else {
+			this.saldo += valor;
+		}
 	}
 
 	// Getters e Setters
