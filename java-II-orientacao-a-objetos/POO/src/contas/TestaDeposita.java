@@ -7,7 +7,7 @@ public class TestaDeposita {
 		try {
 			cc.deposita(-100);
 		} catch (IllegalArgumentException e) {
-			System.out.println("Não foi possivel depositar o valor informado " + e);
+			System.out.println(e.getMessage());
 		}
 	}
 }
