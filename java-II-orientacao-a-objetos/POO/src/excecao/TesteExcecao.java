@@ -3,17 +3,17 @@ package excecao;
 public class TesteExcecao {
 	public static void main(String[] args) {
 		System.out.println("Inicio main");
-		metodo1();
+		try {
+			metodo1();
+		} catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Error: " + e);
+		}
 		System.out.println("Fim main");
 	}
 
 	static void metodo1() {
 		System.out.println("Inicio metodo 1");
-		try {
-			metodo2();
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Error: " + e);
-		}
+		metodo2();
 		System.out.println("Fim metodo 1");
 	}
 
