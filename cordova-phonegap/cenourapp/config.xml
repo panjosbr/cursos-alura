@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:gap="http://phonegap.com/ns/1.0" 
+    version="1.0.0" id="io.github.k3yboard.cenourapp">
+    <name>CenourApp</name>
+    <description>Menu do restaurante do CenourApp</description>
+    <author href="https://github.com/K3yboard/startupme" 
+        email="qualquer@k3yboard.com">
+        Paulo dos Anjos
+    </author>
+</widget>

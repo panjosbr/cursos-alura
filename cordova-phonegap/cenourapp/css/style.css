@@ -5,6 +5,12 @@ body {
   text-align: center;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 label {
   display: block;
   padding: 4em 0 1em;
@@ -45,6 +51,21 @@ input[type=radio] {
 .menu {
   width: 100%;
   margin-bottom: 100px;
+}
+
+.container-menus {
+  transform: translateX(0);
+  transition: transform 300ms ease;
+  width: 200%;
+}
+
+.container-menus .menu {
+  float: left;
+  width: 50%;
+}
+
+#opcao-bebidas:checked ~ .container-menus {
+  transform: translateX(-50%);
 }
 
 #opcao-bolos:checked ~ #menu-bebidas,
