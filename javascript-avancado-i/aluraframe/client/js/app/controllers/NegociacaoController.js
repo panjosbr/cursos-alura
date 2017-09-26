@@ -10,13 +10,8 @@ class NegociacaoController {
 
     adiciona(event) {
         event.preventDefault();
-
-        let negociacao = this._criaNegociacao();
-
-        this._listaNegociacoes.adiciona(negociacao);
+        this._listaNegociacoes.adiciona(this._criaNegociacao());
         this._limpaFormulario();
-
-        console.log(this._listaNegociacoes.negociacoes);
     }
 
     _criaNegociacao() {
