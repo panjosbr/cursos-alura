@@ -3,23 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
-    <h1>Alura Typer</h1>
-    <p class="frase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-    <ul class="informacoes">
-      <li><span id="tamanho-frase">19</span> palavras</li>
-      <li><span id="tempo-digitacao">5</span> segundos</li>
-    </ul>
+    <div class="container">
 
-    <textarea class="campo-digitacao" rows="8" cols ="40"></textarea>
-    <button id="botao-reiniciar">Reiniciar Jogo</button>
-
-    <ul>
-      <li><span id="contador-caracteres">0</span> caracteres</li>
-      <li><span id="contador-palavras">0</span> palavras</li>
-    </ul>
+      <h1>Alura Typer</h1>
+      <p class="frase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      
+      <ul class="informacoes">
+        <li><span id="tamanho-frase">19</span> palavras</li>
+        <li><span id="tempo-digitacao">5</span> segundos</li>
+      </ul>
+      
+      <textarea class="campo-digitacao" rows="8" cols ="40"></textarea>
+      <button id="botao-reiniciar">Reiniciar Jogo</button>
+      
+      <ul>
+        <li><span id="contador-caracteres">0</span> caracteres</li>
+        <li><span id="contador-palavras">0</span> palavras</li>
+      </ul>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
