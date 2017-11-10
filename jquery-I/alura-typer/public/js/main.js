@@ -5,6 +5,7 @@ $(function() {
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaCronometro();
+    inicializaMarcadores();
     $('#botao-reiniciar').click(reiniciaJogo);
 });
 
@@ -52,4 +53,22 @@ function reiniciaJogo() {
     $('#tempo-digitacao').text(tempoInicial);
     inicializaCronometro();
     campo.toggleClass("campo-desativado");
+    campo.removeClass("borda-vermelha");
+    campo.removeClass("borda-verde");
+}
+
+function inicializaMarcadores() {
+    var frase = $(".frase").text();
+    campo.on("input", function() {
+        var digitado = campo.val();
+        var comparavel = frase.substr(0, digitado.length);
+
+        if(digitado == comparavel) {
+            campo.addClass('borda-verde');
+            campo.removeClass('borda-vermelha');
+        } else {
+            campo.addClass('borda-vermelha');
+            campo.removeClass('borda-verde');
+        }
+    });
 }
