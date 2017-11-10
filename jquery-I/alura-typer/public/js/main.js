@@ -36,10 +36,8 @@ function inicializaCronometro() {
             tempoRestante--;
             $('#tempo-digitacao').text(tempoRestante);
             if(tempoRestante < 1) {
-                campo.attr('disabled', true);
                 clearInterval(cronometroID);
-                $('#botao-reiniciar').attr('disabled', false);
-                campo.toggleClass('campo-desativado');
+                finalizaJogo();
             }
         }, 1000);
     });
@@ -71,4 +69,29 @@ function inicializaMarcadores() {
             campo.removeClass('borda-verde');
         }
     });
+}
+
+function inserePlacar() {
+    var corpoTabela = $('.placar').find('tbody');
+    var usuario = 'Paulo';
+    var numPalavras = $('#contador-palavras').text();
+
+    var linha = novaLinha(usuario, numPalavras);
+    corpoTabela.append(linha);
+}
+
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
+}
+
+function novaLinha(usuario, palavras) {
+    var linha = $('<tr>');
+    var colunaUsuario = $('<td>').text(usuario);
+    var colunaPalavras = $('<td>').text(palavras);
+    linha.append(colunaUsuario);
+    linha.append(colunaPalavras);
+
+    return linha;
 }
