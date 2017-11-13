@@ -29,9 +29,14 @@ function inicializaContadores() {
     });
 }
 
+function atualizaTempoInicial(tempo) {
+    tempoInicial = tempo;
+    $('#tempo-digitacao').text(tempo);
+}
+
 function inicializaMarcadores() {
-    var frase = $(".frase").text();
     campo.on("input", function() {
+        var frase = $(".frase").text();
         var digitado = campo.val();
         var comparavel = frase.substr(0, digitado.length);
 
@@ -46,8 +51,8 @@ function inicializaMarcadores() {
 }
 
 function inicializaCronometro() {
-    var tempoRestante = $("#tempo-digitacao").text();
     campo.one("focus", function() {
+        var tempoRestante = $("#tempo-digitacao").text();
         var cronometroID = setInterval(function() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
