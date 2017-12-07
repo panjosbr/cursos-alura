@@ -47,3 +47,7 @@ body {
   text-align: center;
   background-color: #c9c9c7;
 }
+
+#botao-sync {
+  float: right;
+}
