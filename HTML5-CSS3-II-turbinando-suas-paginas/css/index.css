@@ -15,18 +15,13 @@
     text-align: right;
     display: block;
 }
-.saudacao-ultima-linha em {
-    display: inline-block;
-    -webkit-transform: rotate(-10deg) skew(-10deg);
-    transform: rotate(-10deg) skew(-10deg);
-}
 .saudacao strong {
     font-size: 2em;
     color: #000;
 }
 .saudacao em {
     color: #851944;
-    font-size: 3em;
+    font-size: 4em;
 }
 .botao-index {
     font-size: 1.25em;
@@ -110,56 +105,38 @@ main {
 .eficiencia {
     top: 20%;
     left: 75%;
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
 }
 .boas-praticas {
     top: 70%;
     left: 20%;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
 }
 .codigo-limpo {
     top: 45%;
     left: 10%;
-    -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
 }
 .css3 {
     top: 50%;
     left: 30%;
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
 }
 .html5 {
     top: 40%;
     left: 80%;
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
 }
 .javascript {
     top: 10%;
     left: 60%;
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
 }
 .acessibilidade {
     top: 30%;
     left: 25%;
-    -webkit-transform: rotate(-19deg);
-    transform: rotate(-19deg);
 }
 .responsivo {
     top: 15%;
     left: 15%;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
 }
 .otimizacoes {
     top: 60%;
     left: 70%;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
 }
 .agilidade {
     top: 10%;
@@ -168,32 +145,9 @@ main {
 .design {
     top: 35%;
     left: 65%;
-    -webkit-transform: rotate(-40deg);
-    transform: rotate(-40deg);
 }
 .titulo-principal {
     position: relative;
-}
-
-.titulo-principal .link-twitter{
-    display: inline-block;
-    width: 14em;
-    box-sizing: border-box;
-    padding: 1em 0;
-    background-color: #3c1d3d;
-    border: .25em solid #000;
-    color: #FFF;
-    font-size: 1.2em;
-    text-align: center;
-    line-height: 1;
-    text-decoration: none;
-    font-family: "Open Sans Condensed", sans-serif;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform-origin: 0 0;
-    transform: translate(6.5765em, -2.4745em) rotate(45deg);
 }
 .blog .inicio-post {
     position: absolute;
