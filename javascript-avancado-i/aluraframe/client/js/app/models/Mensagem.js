@@ -1,8 +1,9 @@
 class Mensagem {
 
-    constructor(texto='') {
+    // constructor(texto='') { PARÂMETRO OPCIONAL, NAO FUNCIONA NO EDGE13
+    constructor(texto) {
 
-        this._texto = texto;
+        this._texto = texto || '';
     }
 
     get texto() {
