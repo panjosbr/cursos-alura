@@ -3,7 +3,6 @@ class NegociacaoController {
     constructor() {
 
         let $ = document.querySelector.bind(document);
-        this._ordemAtual = '';
 
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
@@ -14,10 +13,12 @@ class NegociacaoController {
             new NegociacoesView($('#negociacoesView')),
             'adiciona', 'esvazia', 'ordena', 'inverteOrdem' );
 
-        this._mensagem = new Bind(
-            new Mensagem(),
-            new MensagemView($('#mensagemView')),
-            'texto');
+            this._mensagem = new Bind(
+                new Mensagem(),
+                new MensagemView($('#mensagemView')),
+                'texto');
+
+            this._ordemAtual = '';
     }
 
     adiciona(event) {
