@@ -80,7 +80,8 @@ class NegociacaoController {
             .then(mensagem => {
                 this._mensagem.texto = mensagem;
                 this._listaNegociacoes.esvazia();
-            });
+            })
+            .catch(erro => this._mensagem.texto = erro);
     }
 
     ordena(coluna) {
