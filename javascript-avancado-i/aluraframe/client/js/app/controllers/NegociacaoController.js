@@ -13,25 +13,33 @@ class NegociacaoController {
             new NegociacoesView($('#negociacoesView')),
             'adiciona', 'esvazia', 'ordena', 'inverteOrdem' );
 
-            this._mensagem = new Bind(
-                new Mensagem(),
-                new MensagemView($('#mensagemView')),
-                'texto');
+        this._mensagem = new Bind(
+            new Mensagem(),
+            new MensagemView($('#mensagemView')),
+            'texto');
 
-            this._ordemAtual = '';
+        this._ordemAtual = '';
 
-            ConnectionFactory
-                .getConnection()
-                .then(connection => new NegociacaoDao(connection))
-                .then(dao => dao.listaTodos())
-                .then(negociacoes =>
-                    negociacoes.forEach(negociacao =>
-                        this._listaNegociacoes.adiciona(negociacao)))
-                .catch(erro => {
-                    console.log(erro);
-                    this._mensagem.texto = erro;
-                })
+        this._init();
+    }
 
+    _init() {
+
+        ConnectionFactory
+            .getConnection()
+            .then(connection => new NegociacaoDao(connection))
+            .then(dao => dao.listaTodos())
+            .then(negociacoes =>
+                negociacoes.forEach(negociacao =>
+                    this._listaNegociacoes.adiciona(negociacao)))
+            .catch(erro => {
+                console.log(erro);
+                this._mensagem.texto = erro;
+            });
+
+        setInterval(() => {
+            this.importaNegociacoes();
+        }, 3000);
     }
 
     adiciona(event) {
