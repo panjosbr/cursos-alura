@@ -20,7 +20,7 @@ var NegociacaoController = function () {
 
         this._ordemAtual = '';
 
-        this._service = new NegociacaoServic();
+        this._service = new NegociacaoService();
 
         this._init();
     }
