@@ -1,2 +1,5 @@
 *node_modules/
 .idea/
+aluraframe/client/js/app/**/*.js
+*.js.map
+
