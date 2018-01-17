@@ -1,5 +1,4 @@
 *node_modules/
 .idea/
-aluraframe/client/js/app/**/*.js
+javascript-avancado-i/aluraframe/client/js/app/**/*.js
 *.js.map
-

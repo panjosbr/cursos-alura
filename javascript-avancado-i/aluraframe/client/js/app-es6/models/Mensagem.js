@@ -1,4 +1,4 @@
-class Mensagem {
+export class Mensagem {
 
     // constructor(texto='') { PARÂMETRO OPCIONAL, NAO FUNCIONA NO EDGE13
     constructor(texto) {
