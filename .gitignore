@@ -3,3 +3,4 @@
 javascript-avancado-i/aluraframe/client/js/app/**/*.js
 *.js.map
 *projeto-webpack/client/app/
+projeto-webpack/client/dist
