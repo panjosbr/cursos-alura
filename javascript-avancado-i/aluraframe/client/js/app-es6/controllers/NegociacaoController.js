@@ -7,7 +7,7 @@ import { NegociacaoService } from '../services/NegociacaoService';
 import { DateHelper } from '../helpers/DateHelper';
 import { Bind } from '../helpers/Bind';
 
-export class NegociacaoController {
+class NegociacaoController {
 
     constructor() {
 
@@ -112,4 +112,10 @@ export class NegociacaoController {
             }))
             .catch(error => this._mensagem.texto = error);
     }
+}
+
+let negociacaoController = new NegociacaoController();
+
+export function currentInstance() {
+    return negociacaoController;
 }
