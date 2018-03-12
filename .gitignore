@@ -5,3 +5,5 @@ javascript-avancado-i/aluraframe/client/js/app/**/*.js
 *.min.map
 *projeto-webpack/client/app/
 projeto-webpack/client/dist
+typescript/alurabank/app/js/**/*.js
+typescript/alurabank/app/js/app.js
