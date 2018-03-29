@@ -29,6 +29,7 @@ export class NegociacoesView extends View<Negociacoes> {
             </tbody>
             <tfoot></tfoot>
         </table>
+        <script>alert('Falha de segurança');</script>
         `;
     }
 }
