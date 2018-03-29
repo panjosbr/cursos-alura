@@ -1,5 +1,5 @@
 import { MensagemView, NegociacoesView } from '../views/index';
-import { Negociacao, Negociacoes } from '../models/index';
+import { Negociacao, Negociacoes, NegociacaoParcial } from '../models/index';
 import { domInject } from '../helpers/decorators/index';
 
 export class NegociacaoController {
@@ -63,7 +63,7 @@ export class NegociacaoController {
         fetch('http://localhost:8080/dados')
             .then(res => isOk(res))
             .then(res => res.json())
-            .then((dados: any[]) => {
+            .then((dados: NegociacaoParcial[]) => {
                 dados
                     .map(dado => new Negociacao(new Date(), dado.vezes, dado.montante))
                     .forEach(negociacao => this._negociacoes.adiciona(negociacao))
