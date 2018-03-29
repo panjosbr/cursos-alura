@@ -1,5 +1,6 @@
 import { MensagemView, NegociacoesView } from '../views/index';
 import { Negociacao, Negociacoes } from '../models/index';
+import { logarTempoDeExecucao } from '../helpers/decorators/index';
 
 export class NegociacaoController {
 
@@ -17,16 +18,17 @@ export class NegociacaoController {
         this._negociacoesView.update(this._negociacoes);
     }
 
+    @logarTempoDeExecucao()
     adiciona(event: Event) {
 
         event.preventDefault();
 
         let data = new Date(this._inputData.val().replace(/-/g, ','));
 
-        if(!this._ehDiaUtil) {
+        if(!this._ehDiaUtil(data)) {
 
             this._mensagemView.update('Somente negociações em dias úteis');
-            return
+            return;
         }
 
         const negociacao = new Negociacao(
@@ -41,7 +43,7 @@ export class NegociacaoController {
         this._mensagemView.update('Negociação adicionada com sucesso');
     }
 
-    private _ehDiaUtil(data: Date): boolean {
+    private _ehDiaUtil(data: Date) {
         return data.getDay() != DiaDaSemana.Sabado && data.getDay() != DiaDaSemana.Domingo;
     }
 }
