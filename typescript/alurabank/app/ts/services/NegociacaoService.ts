@@ -1,4 +1,4 @@
-import { NegociacaoParcial, Negociacao } from '../models/index';
+import { Negociacao, NegociacaoParcial } from '../models/index';
 
 export class NegociacaoService {
 
@@ -11,7 +11,10 @@ export class NegociacaoService {
                 dados
                     .map(dado => new Negociacao(new Date(), dado.vezes, dado.montante))
             )
-            .catch(err => console.log(err.message));
+            .catch(err => {
+                console.log(err.message);
+                throw new Error('Não foi possível importaras negociações');
+            });
     }
 }
 
