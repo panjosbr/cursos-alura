@@ -7,3 +7,4 @@ javascript-avancado-i/aluraframe/client/js/app/**/*.js
 projeto-webpack/client/dist
 typescript/alurabank/app/js/**/*.js
 typescript/alurabank/app/js/app.js
+typescript/alurabank/package-lock.json
